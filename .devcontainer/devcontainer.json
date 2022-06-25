@@ -1,0 +1,22 @@
+{
+  "name": "docker-cake",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "php",
+  "workspaceFolder": "/var/www/html",
+  "settings": {
+    "[php]": {
+        "editor.formatOnSave": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/vendor/*/**": true
+    }
+  },
+  "extensions": [
+    "editorconfig.editorconfig"
+  ]
+}
