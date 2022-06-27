@@ -3,7 +3,7 @@ version: '3'
 services:
   nginx:
     container_name: nginx
-    image: nginx:latest
+    image: nginx:alpine
     ports:
     - "80:80"
     volumes:
@@ -21,9 +21,12 @@ services:
     container_name: mysql
     image: mysql:8.0
     volumes:
-      - mysql/:/var/lib/mysql
+      - db-store:/var/lib/mysql
     environment:
       MYSQL_DATABASE: docker
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       MYSQL_ROOT_PASSWORD: docker
+
+volumes:
+  db-store:
